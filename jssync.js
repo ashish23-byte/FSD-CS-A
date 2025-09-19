@@ -3,7 +3,7 @@ function register(){
         setTimeout(() => {
             console.log("Registered End");
             resolve();
-        }, 5000);
+        }, 3000);
     });
     // setTimeout(() => {
     //     console.log("Registered End");
