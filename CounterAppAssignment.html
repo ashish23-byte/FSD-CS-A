@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container{
+        height: 400px;
+        width: 400px;
+        border: 2px solid black;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        background-color: lightgrey;
+      }
+      .logo{
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid black;
+        background-color: white;
+      }
+      .counter{
+        text-align: center;
+        margin: 20px;
+      } 
+      #count{
+        font-size: 50px;
+        text-align: center;
+        border: 2px solid black;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: auto;
+        background-color: white;
+      }
+      button{
+        height: 40px;
+        width: 60px;
+        font-size: 20px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      #warning{
+        color: red;
+        display: none;
+      }
+    </style>
+</head>
+<body>
+  <div class ="container">
+    <div class="logo">
+      <h1>Logo</h1>
+    </div>
+      <div class="counter">
+      <h1>Counter App</h1>
+       <h2 id="counter">0</h2>
+        <div>
+          <button onclick="decrement()">-</button>
+          <button onclick="increment()">+</button>
+        </div>
+      </div>
+
+    
+</div>
+    <script>
+       let count = 0;
+      const counter = document.getElementById("counter");
+
+      function updateCounter() {
+        if (count === 5) counter.style.color = "red";
+        else counter.style.color = "black";
+        counter.innerText = count;
+      }
+      function increment() {
+        if (count >= 10) return alert("Maximum limit");
+        count++;
+        updateCounter();
+      }
+      function decrement() {
+        if (count < 0) return alert("Minimum limit");
+        count--;
+        updateCounter();
+      }
+        
+    </script>
+</body>
+</html>
