@@ -5,22 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-         #avi{
+         /* #avi{
             border: 5px solid red;
             height: 300px;
             width: 300px;
             background-color: brown;
-         }
+         } */
     </style>
 </head>
-<body>
-    <div id="avi">
+<body id="avi">
+    <!-- <div id="avi">
       <button onclick="abes()">click</button>
       <p id="text"></p>
     </div>
     <script>
         function abes(){
             document.getElementById("text").innerHTML="<h1>hello</h1>";
+        }
+    </script> -->
+
+    <button onclick="red()">RED</button>
+    <button onclick="blue()">BLUE</button>
+    <button onclick="green()">GREEN</button>
+
+    <script>
+        function red(){
+            document.getElementById("avi").style.backgroundColor="red";
+        }
+         function blue(){
+            document.getElementById("avi").style.backgroundColor="blue";
+        }
+         function green(){
+            document.getElementById("avi").style.backgroundColor="green";
         }
     </script>
 </body>
